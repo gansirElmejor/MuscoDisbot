@@ -3,12 +3,17 @@ const { Client, GatewayIntentBits } = require("discord.js");
 const fs = require('fs');
 const Event_JSONKey_Array = ["event1","event2","event3","event4","event5","event6","event7","event8","event9","event10"];
 const CommandPerfix = "!";
+const AdministratorId = ["754519395975561286"];
 //const { Configuration, OpenAIApi } = require("openai");
 
 //const FreeChatChennelId = "951537831581483058";
 // ChatPlugins Below
 const ReplyBotInfo = require("./plugins/info.js");
 const RemoveEvent = require("./plugins/RemoveEvent.js");
+const ReplyEvent = require("./plugins/ReadEvent.js");
+const RandCat = require("./plugins/RandCat.js");
+const RandDog = require("./plugins/RandDog.js");
+const SearchArtist = require("./plugins/SearchArtist.js");
 // ChatPlugins Above
 
 const client = new Client({ intents: [
@@ -40,14 +45,6 @@ function PostEvent_CheckCurrentStep(User_Inst) {
 function PostEvent_Proceed(User_Inst,msgStr,channel) {
 
     function CheckDateFormate(dateStr) {
-        /*
-        var d = new Date();
-        var Year = d.getUTCFullYear();
-        var Month = d.getUTCMonth();
-        var Day = d.getUTCDay();
-        var Hour = d.getUTCHours();
-        var Minute = d.getUTCMinutes();
-        */
     try{
         var IptYear = parseInt(dateStr.substring(0,4));
         var IptMonth = parseInt(dateStr.substring(4,6));
@@ -151,7 +148,7 @@ client.on("messageCreate", async function(message){
         let Perfix = SplitedContent[0].toLowerCase(); // All perfix should be lowercase;
         let channel = message.channel;
         let User_Inst = message.author;
-
+        
         //Run checks before proceed below
         if (message.author.bot) return;
         if (PostEvent_CheckCurrentStep(User_Inst)) {if (PostEvent_Proceed(User_Inst,message.content,channel)) {message.react("✅");} else {message.react("❌");}; return;};
@@ -166,6 +163,11 @@ client.on("messageCreate", async function(message){
             return;
         } else
         if (Perfix == CommandPerfix+"postevent") {
+            if (!(AdministratorId.includes(User_Inst.id))) {
+                message.react("❌");
+                message.reply("Sorry, you are not authenticated to run this command!")
+                return;
+            };
             channel.send('Please enter event title:\n(Enter "CANCEL" to cancel your action)')
             .then(msg => console.log(`Sent message: ${msg.content}`))
             .catch(console.error);
@@ -174,6 +176,11 @@ client.on("messageCreate", async function(message){
             return;
         } else
         if (Perfix == CommandPerfix+"removeevent") {
+            if (!(AdministratorId.includes(User_Inst.id))) {
+                message.react("❌");
+                message.reply("Sorry, you are not authenticated to run this command!")
+                return;
+            };
             try{
             let Arg1 = message.content.substring(13,message.content.length);
             RemoveEvent(Arg1,message);
@@ -183,8 +190,29 @@ client.on("messageCreate", async function(message){
                 msg.reply('An error has occured! Please contact DEV!').then(msg => console.log(`Updated the content of a message to ${msg.content}`)).catch(console.error);
                 msg.react("⚠️");
             };
+        } else
+        if (Perfix == CommandPerfix + "event" || Perfix == CommandPerfix + "events") {
+            ReplyEvent(message);
+            return;
         };
-
+        if (Perfix == CommandPerfix + "randomcat") {
+            RandCat(channel);
+            return;
+        };
+        if (Perfix == CommandPerfix + "randomdog") {
+            RandDog(channel);
+            return;
+        };
+        if (Perfix == CommandPerfix+"searchartist") {
+             if (typeof SplitedContent[1] == 'undefined') {
+                message.react("❌")
+                message.reply("Missing artist name!")
+                return;
+            };
+            let Arg1 = message.content.substring(14,message.content.length);
+            SearchArtist(message,Arg1);
+            return
+        }
        // if (message.channel.id != FreeChatChennelId) return;
         
         /*
