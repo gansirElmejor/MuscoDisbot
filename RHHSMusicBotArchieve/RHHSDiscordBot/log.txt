@@ -1,0 +1,154 @@
+
+Sent message: Please enter event title:
+(Enter "CANCEL" to cancel your action)
+User in process of postevent
+User in process of postevent
+User in process of postevent
+Sent message: Please enter event title:
+(Enter "CANCEL" to cancel your action)
+User in process of postevent
+User in process of postevent
+User in process of postevent
+User in process of postevent
+Updated the content of a message to Successfully Removed!
+<ref *1> Message {
+  channelId: '1056055024897237096',
+  guildId: '1056055023794126908',
+  id: '1180920876955357264',
+  createdTimestamp: 1701623877515,
+  type: 0,
+  system: false,
+  content: '',
+  author: ClientUser {
+    id: '1102027701096812614',
+    bot: true,
+    system: false,
+    flags: UserFlagsBitField { bitfield: 0 },
+    username: 'RHHS Music',
+    globalName: null,
+    discriminator: '8756',
+    avatar: '9b549c05ac81b6b76a6d0505324bf84b',
+    banner: null,
+    accentColor: null,
+    avatarDecoration: null,
+    verified: true,
+    mfaEnabled: false
+  },
+  pinned: false,
+  tts: false,
+  nonce: null,
+  embeds: [],
+  components: [],
+  attachments: Collection(1) [Map] {
+    '1180920876754014369' => Attachment {
+      attachment: 'https://cdn.discordapp.com/attachments/1056055024897237096/1180920876754014369/c3f.jpg?ex=657f2d45&is=656cb845&hm=12671f206bd17667e4a5e63569fd531708114f870f5c4ce5cbd115c365ee51ab&',
+      name: 'c3f.jpg',
+      id: '1180920876754014369',
+      size: 48157,
+      url: 'https://cdn.discordapp.com/attachments/1056055024897237096/1180920876754014369/c3f.jpg?ex=657f2d45&is=656cb845&hm=12671f206bd17667e4a5e63569fd531708114f870f5c4ce5cbd115c365ee51ab&',
+      proxyURL: 'https://media.discordapp.net/attachments/1056055024897237096/1180920876754014369/c3f.jpg?ex=657f2d45&is=656cb845&hm=12671f206bd17667e4a5e63569fd531708114f870f5c4ce5cbd115c365ee51ab&',
+      height: 505,
+      width: 700,
+      contentType: 'image/jpeg',
+      description: null,
+      ephemeral: false,
+      duration: null,
+      waveform: null,
+      flags: [AttachmentFlagsBitField]
+    }
+  },
+  stickers: Collection(0) [Map] {},
+  position: null,
+  roleSubscriptionData: null,
+  resolved: null,
+  editedTimestamp: null,
+  reactions: ReactionManager { message: [Circular *1] },
+  mentions: MessageMentions {
+    everyone: false,
+    users: Collection(0) [Map] {},
+    roles: Collection(0) [Map] {},
+    _members: null,
+    _channels: null,
+    _parsedUsers: null,
+    crosspostedChannels: Collection(0) [Map] {},
+    repliedUser: null
+  },
+  webhookId: null,
+  groupActivityApplication: null,
+  applicationId: null,
+  activity: null,
+  flags: MessageFlagsBitField { bitfield: 0 },
+  reference: null,
+  interaction: null
+}
+Updated the content of a message to Successfully Removed!
+<ref *1> Message {
+  channelId: '1056055024897237096',
+  guildId: '1056055023794126908',
+  id: '1212948033428389888',
+  createdTimestamp: 1709259746654,
+  type: 0,
+  system: false,
+  content: '',
+  author: ClientUser {
+    id: '1102027701096812614',
+    bot: true,
+    system: false,
+    flags: UserFlagsBitField { bitfield: 0 },
+    username: 'RHHS Music',
+    globalName: null,
+    discriminator: '8756',
+    avatar: '9b549c05ac81b6b76a6d0505324bf84b',
+    banner: null,
+    accentColor: null,
+    avatarDecoration: null,
+    verified: true,
+    mfaEnabled: false
+  },
+  pinned: false,
+  tts: false,
+  nonce: null,
+  embeds: [],
+  components: [],
+  attachments: Collection(1) [Map] {
+    '1212948033189318696' => Attachment {
+      attachment: 'https://cdn.discordapp.com/attachments/1056055024897237096/1212948033189318696/2pp.gif?ex=65f3b0e2&is=65e13be2&hm=60fbe03370594ac4c77bedd2824f381d0690721dcbd2a87e3bc6b75f41f33dd5&',
+      name: '2pp.gif',
+      id: '1212948033189318696',
+      size: 492977,
+      url: 'https://cdn.discordapp.com/attachments/1056055024897237096/1212948033189318696/2pp.gif?ex=65f3b0e2&is=65e13be2&hm=60fbe03370594ac4c77bedd2824f381d0690721dcbd2a87e3bc6b75f41f33dd5&',
+      proxyURL: 'https://media.discordapp.net/attachments/1056055024897237096/1212948033189318696/2pp.gif?ex=65f3b0e2&is=65e13be2&hm=60fbe03370594ac4c77bedd2824f381d0690721dcbd2a87e3bc6b75f41f33dd5&',
+      height: 148,
+      width: 225,
+      contentType: 'image/gif',
+      description: null,
+      ephemeral: false,
+      duration: null,
+      waveform: null,
+      flags: [AttachmentFlagsBitField]
+    }
+  },
+  stickers: Collection(0) [Map] {},
+  position: null,
+  roleSubscriptionData: null,
+  resolved: null,
+  editedTimestamp: null,
+  reactions: ReactionManager { message: [Circular *1] },
+  mentions: MessageMentions {
+    everyone: false,
+    users: Collection(0) [Map] {},
+    roles: Collection(0) [Map] {},
+    _members: null,
+    _channels: null,
+    _parsedUsers: null,
+    crosspostedChannels: Collection(0) [Map] {},
+    repliedUser: null
+  },
+  webhookId: null,
+  groupActivityApplication: null,
+  applicationId: null,
+  activity: null,
+  flags: MessageFlagsBitField { bitfield: 0 },
+  reference: null,
+  interaction: null
+}
